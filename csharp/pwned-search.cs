@@ -20,7 +20,7 @@ namespace pwned_search {
                 sBuilder.Append(data[i].ToString("x2"));
             }
             string result = sBuilder.ToString().ToUpper();
-            Console.WriteLine($"The SHA-1 hash of {plaintext} is: {result}");
+            Console.WriteLine("The SHA-1 hash of {plaintext} is: {result}");
 
             // get a list of all the possible passwords where the first 5 digits of the hash are the same
             string url = "https://api.pwnedpasswords.com/range/" + result.Substring(0, 5);
